@@ -14,5 +14,5 @@ Football Manager
 All scripts to build and run application are located in *documentation* folder:
 * Run `package.bat` first. In the case of success build the executable `football-manager.jar` will be in *delivery* folder. If *delivery* is not exists just create it.
 * Run `run.bat`. Just to start a game.
-* XML files are in *data* folder. Please note that the execution units all test resets any previously stored data.
+* XML files are in *data* folder. Please note that the execution units tests resets any previously stored data.
 * Application has been tested in Windows CL so far. 
