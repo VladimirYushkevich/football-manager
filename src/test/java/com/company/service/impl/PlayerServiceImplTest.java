@@ -52,7 +52,7 @@ public class PlayerServiceImplTest {
 	}
 
 	@Test
-	public void shouldCreatePlayerWhenPlayerWithTeamExistsAndPositionSelected() {
+	public void shouldUpdatePlayerWhenPlayerWithTeamExistsAndPositionSelected() {
 
 		Player existedPlayer = new Player();
 		existedPlayer.setTeamId(3);
@@ -62,7 +62,7 @@ public class PlayerServiceImplTest {
 		player.setPosition(Position.FW);
 		playerServiceImpl.createPlayer(player);
 
-		verify(playerDAO, times(1)).createOrUpdatePlayer(player);
+		verify(playerDAO, times(1)).createOrUpdatePlayer(existedPlayer);
 
 	}
 
