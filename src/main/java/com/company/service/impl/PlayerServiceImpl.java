@@ -64,6 +64,14 @@ public class PlayerServiceImpl implements PlayerService {
 
 				return;
 			}
+
+			if (existedPlayer.getPosition() != null) {
+				existedPlayer.setTeamId(player.getTeamId());
+
+				playerDAO.createOrUpdatePlayer(existedPlayer);
+
+				return;
+			}
 		}
 
 		playerDAO.createOrUpdatePlayer(player);
