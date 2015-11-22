@@ -7,7 +7,7 @@ import com.company.enums.Position;
 /**
  * Player domain object.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class Player {

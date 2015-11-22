@@ -10,7 +10,7 @@ import com.company.service.PlayerService;
 /**
  * Player service implementation.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class PlayerServiceImpl implements PlayerService {
@@ -36,7 +36,7 @@ public class PlayerServiceImpl implements PlayerService {
 		if (result.isPresent())
 			return result.get().getMatchDay();
 		return 0;
-	};
+	}
 
 	private void validate(Player player) {
 		Optional<Player> result = Optional.ofNullable(player);

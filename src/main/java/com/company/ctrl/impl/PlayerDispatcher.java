@@ -21,7 +21,7 @@ import com.company.view.View;
 /**
  * Responsible for handling of all player events.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class PlayerDispatcher implements Dispatcher {
@@ -59,7 +59,7 @@ public class PlayerDispatcher implements Dispatcher {
 			}
 			break;
 		default:
-			throw new IllegalArgumentException("Now disparcher's actions have been found in PlayerController");
+			throw new IllegalArgumentException("Now dispatcher's actions have been found in PlayerController");
 		}
 	}
 

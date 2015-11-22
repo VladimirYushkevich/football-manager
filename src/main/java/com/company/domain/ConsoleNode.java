@@ -8,7 +8,7 @@ import com.company.enums.DispatchAction;
 /**
  * Class for storing menu items in the some kind tree.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class ConsoleNode {

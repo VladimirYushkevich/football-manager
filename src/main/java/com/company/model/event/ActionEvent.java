@@ -3,7 +3,7 @@ package com.company.model.event;
 /**
  * Class for transferring data in MVC.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class ActionEvent {

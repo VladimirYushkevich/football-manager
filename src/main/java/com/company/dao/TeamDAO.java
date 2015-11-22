@@ -8,7 +8,7 @@ import com.company.domain.Team;
 /**
  * Team DAO.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public interface TeamDAO extends XMLDAO {

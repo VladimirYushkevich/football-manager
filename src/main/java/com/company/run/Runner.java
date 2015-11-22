@@ -4,8 +4,8 @@ import com.company.ctrl.DispatchController;
 
 /**
  * Application launcher.
- * 
- * @author uyushkevich
+ *
+ * @author vladimir.yushkevich
  *
  */
 public class Runner {

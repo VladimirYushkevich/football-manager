@@ -3,7 +3,7 @@ package com.company.enums;
 /**
  * Controller actions enums.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public enum ControllerAction {

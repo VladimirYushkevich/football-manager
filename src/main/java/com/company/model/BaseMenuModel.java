@@ -11,7 +11,7 @@ import com.company.model.event.ActionListener;
 /**
  * Base realization of Mode.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public abstract class BaseMenuModel implements Model {

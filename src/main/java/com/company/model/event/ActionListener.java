@@ -7,6 +7,7 @@ package com.company.model.event;
  * component's <code>addActionListener</code> method. When the action event
  * occurs, that object's <code>actionPerformed</code> method is invoked.
  *
+ *  * @author vladimir.yushkevich
  */
 public interface ActionListener {
 
@@ -15,6 +16,6 @@ public interface ActionListener {
 	 * 
 	 * @param ae ActionEvent
 	 */
-	public void actionPerformed(ActionEvent ae);
+	void actionPerformed(ActionEvent ae);
 
 }

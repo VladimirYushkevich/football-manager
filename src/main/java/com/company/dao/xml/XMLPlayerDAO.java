@@ -20,7 +20,7 @@ import com.company.utils.PropertyHolder;
 /**
  * XML player DAO implementation.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class XMLPlayerDAO extends XMLAbstractDAO implements PlayerDAO {

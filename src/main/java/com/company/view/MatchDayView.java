@@ -8,7 +8,7 @@ import com.company.model.event.ActionEvent;
 /**
  * Match day view.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class MatchDayView implements View {
@@ -18,10 +18,10 @@ public class MatchDayView implements View {
 		@SuppressWarnings("unchecked")
 		List<MatchDayDTO> matchDayDTOs = (List<MatchDayDTO>) ae.getSource();
 		System.out.format("------------------ MatchDay %s ------------------\n", matchDayDTOs.get(0).getMatchDay());
-		matchDayDTOs.stream().forEach(m -> {
-			System.out.format("%1$-23s%2$-1s:%3$-5s%4$-20s\n", m.getHomeTeamName(), m.getHomeTeamResult(),
-					m.getAwayTeamResult(), m.getAwayTeamName());
-		});
+		matchDayDTOs.stream().forEach(m ->
+						System.out.format("%1$-23s%2$-1s:%3$-5s%4$-20s\n", m.getHomeTeamName(), m.getHomeTeamResult(),
+								m.getAwayTeamResult(), m.getAwayTeamName())
+		);
 
 	}
 

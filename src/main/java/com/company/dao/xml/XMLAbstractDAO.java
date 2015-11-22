@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
 /**
  * Base class for performing XML specific methods.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public abstract class XMLAbstractDAO implements XMLDAO {
@@ -32,7 +32,7 @@ public abstract class XMLAbstractDAO implements XMLDAO {
 
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 
-		DocumentBuilder documentBuilder = null;
+		DocumentBuilder documentBuilder;
 		try {
 			documentBuilder = documentBuilderFactory.newDocumentBuilder();
 
@@ -60,9 +60,9 @@ public abstract class XMLAbstractDAO implements XMLDAO {
 			Element mainRootElement = doc.createElement(rootName);
 			doc.appendChild(mainRootElement);
 
-			objects.forEach(n -> {
-				mainRootElement.appendChild(createNode(doc, n));
-			});
+			objects.forEach(n ->
+							mainRootElement.appendChild(createNode(doc, n))
+			);
 
 			Transformer transformer = TransformerFactory.newInstance().newTransformer();
 			DOMSource source = new DOMSource(doc);
@@ -95,6 +95,7 @@ public abstract class XMLAbstractDAO implements XMLDAO {
 
 	private String getTagName() {
 		String path = file.getPath();
-		return path.substring(path.lastIndexOf("\\") + 1).split("\\.")[0];
+		String fileSeparator = System.getProperty("file.separator");
+		return path.substring(path.lastIndexOf(fileSeparator) + 1).split(fileSeparator+"\\.")[0];
 	}
 }

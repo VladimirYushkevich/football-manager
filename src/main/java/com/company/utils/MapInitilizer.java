@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 /**
  * Utility class for initialization generic map.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class MapInitilizer {
@@ -19,11 +19,11 @@ public class MapInitilizer {
 	}
 
 	public static <K, U> Collector<Map.Entry<K, U>, ?, Map<K, U>> entriesToMap() {
-		return Collectors.toMap((e) -> e.getKey(), (e) -> e.getValue());
+		return Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue);
 	}
 
 	public static <K, U> Collector<Map.Entry<K, U>, ?, ConcurrentMap<K, U>> entriesToConcurrentMap() {
-		return Collectors.toConcurrentMap((e) -> e.getKey(), (e) -> e.getValue());
+		return Collectors.toConcurrentMap(Map.Entry::getKey, Map.Entry::getValue);
 	}
 
 }

@@ -6,7 +6,7 @@ import com.company.domain.Player;
 /**
  * Player DAO.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public interface PlayerDAO extends XMLDAO {

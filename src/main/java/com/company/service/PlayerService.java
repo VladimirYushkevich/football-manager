@@ -6,7 +6,7 @@ import com.company.domain.Player;
  * Contains player specific business logic. Probably can be used in future for
  * transaction handling.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public interface PlayerService {

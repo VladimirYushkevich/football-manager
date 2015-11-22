@@ -10,7 +10,7 @@ import com.company.model.event.ActionEvent;
 /**
  * Console view.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class ConsoleView implements View {
@@ -32,10 +32,10 @@ public class ConsoleView implements View {
 		System.out.println("***********************************************");
 	}
 
-	@SuppressWarnings("resource")
+	@SuppressWarnings({"resource", "InfiniteLoopStatement"})
 	@Override
 	public void startFireEvents(Controller controller) {
-		int menuItem = 0;
+		int menuItem;
 
 		while (true) {
 			try {

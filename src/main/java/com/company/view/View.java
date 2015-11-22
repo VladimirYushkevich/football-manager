@@ -7,7 +7,7 @@ import com.company.model.event.ActionEvent;
  * View part of MVC mode. Responsible for event generation (controller
  * notification) and data rendering.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public interface View {
@@ -17,6 +17,6 @@ public interface View {
 	void showData(String data);
 
 	default void startFireEvents(Controller controller) {
-	};
+	}
 
 }

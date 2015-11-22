@@ -6,7 +6,7 @@ import com.company.model.event.ActionListener;
 /**
  * Interface for model in MVC.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public interface Model {

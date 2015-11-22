@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 /**
  * Utility class for extraction application properties.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class PropertyHolder {

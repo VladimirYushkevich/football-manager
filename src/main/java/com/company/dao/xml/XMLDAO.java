@@ -5,7 +5,7 @@ import java.io.File;
 /**
  * Interface for specific behavior of XML DAO.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public interface XMLDAO {

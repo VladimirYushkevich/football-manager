@@ -10,7 +10,7 @@ import com.company.service.TeamService;
 /**
  * Team service implementation.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class TeamServiceImpl implements TeamService {

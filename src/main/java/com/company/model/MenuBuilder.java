@@ -19,7 +19,7 @@ import com.company.service.impl.TeamServiceImpl;
 /**
  * Utility class for building any menu tree.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class MenuBuilder {
@@ -96,7 +96,7 @@ public class MenuBuilder {
 
 		ConsoleNode exitNode = new ConsoleNode(DispatchAction.MENU, 0, String.valueOf(MenuAction.EXIT_GAME), null,
 				ControllerAction.EXIT);
-		exitNode.setChilds(new HashMap<Integer, ConsoleNode>());
+		exitNode.setChilds(new HashMap<>());
 
 		ConsoleNode currentNode = new ConsoleNode(DispatchAction.MENU, menuItem, value, parentNode,
 				ControllerAction.SELECT);
@@ -117,7 +117,7 @@ public class MenuBuilder {
 				parentNode, ControllerAction.SELECT);
 		ConsoleNode exitNode = new ConsoleNode(DispatchAction.MENU, 0, String.valueOf(MenuAction.EXIT_GAME), null,
 				ControllerAction.EXIT);
-		exitNode.setChilds(new HashMap<Integer, ConsoleNode>());
+		exitNode.setChilds(new HashMap<>());
 
 		ConsoleNode currentNode = new ConsoleNode(DispatchAction.MENU, menuItem, value, parentNode,
 				ControllerAction.SELECT);

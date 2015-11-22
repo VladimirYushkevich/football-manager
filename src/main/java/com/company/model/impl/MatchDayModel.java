@@ -18,7 +18,7 @@ import com.company.model.event.ActionListener;
 /**
  * Particular match day model.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class MatchDayModel implements Model {
@@ -58,11 +58,9 @@ public class MatchDayModel implements Model {
 
 		matchDayDTOs = new ArrayList<>();
 		matches.stream().forEach(
-				m -> {
-					matchDayDTOs.add(generateScore(matchDay,
-							mappedTeams.get(m.getHomeTeamId()),
-							mappedTeams.get(m.getAwayTeamId())));
-				});
+				m -> matchDayDTOs.add(generateScore(matchDay,
+						mappedTeams.get(m.getHomeTeamId()),
+						mappedTeams.get(m.getAwayTeamId()))));
 
 		return matchDayDTOs;
 	}

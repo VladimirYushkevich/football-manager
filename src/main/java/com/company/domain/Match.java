@@ -3,7 +3,7 @@ package com.company.domain;
 /**
  * Match domain object.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class Match {

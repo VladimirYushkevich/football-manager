@@ -3,7 +3,7 @@ package com.company.enums;
 /**
  * Menu action enums.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public enum MenuAction {
@@ -14,7 +14,7 @@ public enum MenuAction {
 
 	private String value;
 
-	private MenuAction(String value) {
+	MenuAction(String value) {
 		this.value = value;
 	}
 

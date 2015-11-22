@@ -11,7 +11,7 @@ import com.company.view.View;
 /**
  * Responsible for handling of all menu events.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class MenuDispatcher implements Dispatcher {

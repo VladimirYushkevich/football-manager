@@ -25,7 +25,7 @@ import com.company.view.View;
 /**
  * Responsible for handling of all match events.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class MatchDispatcher implements Dispatcher {
@@ -85,12 +85,10 @@ public class MatchDispatcher implements Dispatcher {
 		String format = "%1$-8s|%2$-23s|%3$-3s|%4$-3s|%5$-3s|%6$-3s|%7$-3s|%8$-3s|%9$-3s";
 		stringBuilder.append(String.format(format, "Position", "Team", "P", "W", "D", "L", "F", "A", "P")).append("\n");
 		AtomicInteger index = new AtomicInteger();
-		teamService.getTeams().stream().sorted(teamByPoints).forEach(t -> {
-			stringBuilder
-					.append(String.format(format, index.incrementAndGet(), t.getName(), matchDay, t.getWon(),
-							t.getDrawn(), t.getLost(), t.getGoalsFor(), t.getGoalsAgainst(), t.getPoints()))
-					.append("\n");
-		});
+		teamService.getTeams().stream().sorted(teamByPoints).forEach(t -> stringBuilder
+                .append(String.format(format, index.incrementAndGet(), t.getName(), matchDay, t.getWon(),
+                        t.getDrawn(), t.getLost(), t.getGoalsFor(), t.getGoalsAgainst(), t.getPoints()))
+                .append("\n"));
 		view.showData(String.valueOf(stringBuilder));
 	}
 
@@ -111,7 +109,7 @@ public class MatchDispatcher implements Dispatcher {
 	}
 
 	private int getNextMatchDay(Optional<Player> resultPlayer) {
-		Player player = null;
+		Player player;
 
 		if (resultPlayer.isPresent()) {
 			player = resultPlayer.get();

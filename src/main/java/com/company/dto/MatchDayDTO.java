@@ -3,7 +3,7 @@ package com.company.dto;
 /**
  * Data transfer object to show match day results.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class MatchDayDTO {

@@ -21,7 +21,7 @@ import com.company.view.View;
  * execution to appropriate controller. Knows about all view and models in the
  * system. Registers model's listeners.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class DispatchController implements Controller {
@@ -63,13 +63,9 @@ public class DispatchController implements Controller {
 	}
 
 	public void start() {
-		matchDayModel.addEventListener(l -> {
-			matchDayView.update(l);
-		});
+		matchDayModel.addEventListener(matchDayView::update);
 
-		consoleMenuModel.addEventListener(l -> {
-			consoleView.update(l);
-		});
+		consoleMenuModel.addEventListener(consoleView::update);
 
 		dispatchers.get(DispatchAction.MENU)
 				.execute(new ActionEvent(((ConsoleMenuModel) consoleMenuModel).getStartMenuConsoleMenuNode()));

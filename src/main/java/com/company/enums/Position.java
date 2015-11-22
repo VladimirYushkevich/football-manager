@@ -3,7 +3,7 @@ package com.company.enums;
 /**
  * Position enums.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public enum Position {
@@ -13,7 +13,7 @@ public enum Position {
 
 	private String value;
 
-	private Position(String value) {
+	Position(String value) {
 		this.value = value;
 	}
 

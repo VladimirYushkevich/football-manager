@@ -5,7 +5,7 @@ import com.company.model.event.ActionEvent;
 /**
  * Interface for dispatching appropriate action.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public interface Dispatcher {

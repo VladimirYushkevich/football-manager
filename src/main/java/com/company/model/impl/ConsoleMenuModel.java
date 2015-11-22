@@ -10,7 +10,7 @@ import com.company.model.MenuBuilder;
 /**
  * Particular console model.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class ConsoleMenuModel extends BaseMenuModel {

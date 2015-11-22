@@ -17,7 +17,7 @@ import com.company.utils.PropertyHolder;
 /**
  * XML team DAO implementation.
  * 
- * @author uyushkevich
+ * @author vladimir.yushkevich
  *
  */
 public class XMLTeamDAO extends XMLAbstractDAO implements TeamDAO {
@@ -53,8 +53,9 @@ public class XMLTeamDAO extends XMLAbstractDAO implements TeamDAO {
 
 	@Override
 	public Node createNode(Document doc, Object object) {
-		Element element = doc.createElement("team");
 		Team team = (Team) object;
+
+		Element element = doc.createElement("team");
 		element.setAttribute("id", String.valueOf(team.getId()));
 		element.setAttribute("name", String.valueOf(team.getName()));
 		element.appendChild(getPlayerElements(doc, element, "rate", String.valueOf(team.getRate())));
@@ -64,15 +65,16 @@ public class XMLTeamDAO extends XMLAbstractDAO implements TeamDAO {
 		element.appendChild(getPlayerElements(doc, element, "goalsFor", String.valueOf(team.getGoalsFor())));
 		element.appendChild(getPlayerElements(doc, element, "goalsAgainst", String.valueOf(team.getGoalsAgainst())));
 		element.appendChild(getPlayerElements(doc, element, "points", String.valueOf(team.getPoints())));
+
 		return element;
 	}
 
 	@Override
 	public void updateTeams(List<Team> teams) {
 		List<Object> objects = new ArrayList<>();
-		teams.forEach(t -> {
-			objects.add(t);
-		});
+
+		teams.forEach(objects::add);
+
 		wrideNodeListToFile(objects, getFile());
 	}
 
