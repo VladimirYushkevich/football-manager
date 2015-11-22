@@ -1,13 +1,5 @@
 package com.company.model;
 
-import static com.company.utils.MapInitilizer.entriesToMap;
-import static com.company.utils.MapInitilizer.entry;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Stream;
-
 import com.company.domain.ConsoleNode;
 import com.company.enums.ControllerAction;
 import com.company.enums.DispatchAction;
@@ -15,6 +7,14 @@ import com.company.enums.MenuAction;
 import com.company.enums.Position;
 import com.company.service.TeamService;
 import com.company.service.impl.TeamServiceImpl;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Stream;
+
+import static com.company.utils.MapInitilizer.entriesToMap;
+import static com.company.utils.MapInitilizer.entry;
 
 /**
  * Utility class for building any menu tree.

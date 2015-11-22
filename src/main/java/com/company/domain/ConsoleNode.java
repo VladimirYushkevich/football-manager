@@ -1,9 +1,9 @@
 package com.company.domain;
 
-import java.util.Map;
-
 import com.company.enums.ControllerAction;
 import com.company.enums.DispatchAction;
+
+import java.util.Map;
 
 /**
  * Class for storing menu items in the some kind tree.

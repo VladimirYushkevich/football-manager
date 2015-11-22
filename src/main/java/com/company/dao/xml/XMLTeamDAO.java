@@ -1,18 +1,17 @@
 package com.company.dao.xml;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.IntStream;
-
+import com.company.dao.TeamDAO;
+import com.company.domain.Team;
+import com.company.utils.PropertyHolder;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.company.dao.TeamDAO;
-import com.company.domain.Team;
-import com.company.utils.PropertyHolder;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * XML team DAO implementation.

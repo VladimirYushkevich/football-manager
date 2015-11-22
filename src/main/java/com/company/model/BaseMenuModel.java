@@ -1,12 +1,12 @@
 package com.company.model;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
 import com.company.domain.ConsoleNode;
 import com.company.model.event.ActionEvent;
 import com.company.model.event.ActionListener;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * Base realization of Mode.

@@ -1,18 +1,15 @@
 package com.company.service.impl;
 
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
+import com.company.dao.PlayerDAO;
+import com.company.domain.Player;
+import com.company.enums.Position;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 
-import com.company.dao.PlayerDAO;
-import com.company.domain.Player;
-import com.company.enums.Position;
+import static org.mockito.Mockito.*;
 
 public class PlayerServiceImplTest {
 
@@ -37,7 +34,7 @@ public class PlayerServiceImplTest {
 		player.setTeamId(3);
 		playerServiceImpl.createPlayer(player);
 
-		verify(playerDAO, times(1)).createPlayer(player);
+		verify(playerDAO, times(1)).createOrUpdatePlayer(player);
 
 	}
 
@@ -50,7 +47,7 @@ public class PlayerServiceImplTest {
 		player.setPosition(Position.FW);
 		playerServiceImpl.createPlayer(player);
 
-		verify(playerDAO, times(1)).createPlayer(player);
+		verify(playerDAO, times(1)).createOrUpdatePlayer(player);
 
 	}
 
@@ -65,7 +62,7 @@ public class PlayerServiceImplTest {
 		player.setPosition(Position.FW);
 		playerServiceImpl.createPlayer(player);
 
-		verify(playerDAO, times(1)).createPlayer(player);
+		verify(playerDAO, times(1)).createOrUpdatePlayer(player);
 
 	}
 
@@ -80,7 +77,7 @@ public class PlayerServiceImplTest {
 		player.setTeamId(3);
 		playerServiceImpl.createPlayer(player);
 
-		verify(playerDAO, times(1)).createPlayer(player);
+		verify(playerDAO, times(1)).createOrUpdatePlayer(player);
 
 	}
 

@@ -1,8 +1,5 @@
 package com.company.ctrl.impl;
 
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import com.company.ctrl.Dispatcher;
 import com.company.domain.ConsoleNode;
 import com.company.domain.Player;
@@ -17,6 +14,9 @@ import com.company.service.impl.PlayerServiceImpl;
 import com.company.service.impl.TeamServiceImpl;
 import com.company.view.ConsoleView;
 import com.company.view.View;
+
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Responsible for handling of all player events.

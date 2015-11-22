@@ -1,9 +1,9 @@
 package com.company.view;
 
-import java.util.List;
-
 import com.company.dto.MatchDayDTO;
 import com.company.model.event.ActionEvent;
+
+import java.util.List;
 
 /**
  * Match day view.

@@ -1,15 +1,5 @@
 package com.company.ctrl;
 
-import static org.mockito.Mockito.when;
-
-import java.io.File;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.Spy;
-
 import com.company.ctrl.impl.MatchDispatcher;
 import com.company.domain.ConsoleNode;
 import com.company.domain.Player;
@@ -21,6 +11,15 @@ import com.company.service.TeamService;
 import com.company.service.impl.PlayerServiceImpl;
 import com.company.service.impl.TeamServiceImpl;
 import com.company.utils.PropertyHolder;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
+
+import java.io.File;
+
+import static org.mockito.Mockito.when;
 
 public class MatchControllerTest {
 
@@ -39,6 +38,7 @@ public class MatchControllerTest {
 	@Spy
 	private MatchDispatcher matchController = new MatchDispatcher();
 
+	@SuppressWarnings("ResultOfMethodCallIgnored")
 	@Before
 	public void before() throws Exception {
 		MockitoAnnotations.initMocks(this);

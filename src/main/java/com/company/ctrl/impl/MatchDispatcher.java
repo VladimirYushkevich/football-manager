@@ -1,12 +1,5 @@
 package com.company.ctrl.impl;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Map;
-import java.util.Optional;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
-
 import com.company.ctrl.Dispatcher;
 import com.company.domain.ConsoleNode;
 import com.company.domain.Player;
@@ -21,6 +14,13 @@ import com.company.service.impl.PlayerServiceImpl;
 import com.company.service.impl.TeamServiceImpl;
 import com.company.view.MatchDayView;
 import com.company.view.View;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 /**
  * Responsible for handling of all match events.
@@ -87,7 +87,7 @@ public class MatchDispatcher implements Dispatcher {
 		AtomicInteger index = new AtomicInteger();
 		teamService.getTeams().stream().sorted(teamByPoints).forEach(t -> stringBuilder
                 .append(String.format(format, index.incrementAndGet(), t.getName(), matchDay, t.getWon(),
-                        t.getDrawn(), t.getLost(), t.getGoalsFor(), t.getGoalsAgainst(), t.getPoints()))
+						t.getDrawn(), t.getLost(), t.getGoalsFor(), t.getGoalsAgainst(), t.getPoints()))
                 .append("\n"));
 		view.showData(String.valueOf(stringBuilder));
 	}

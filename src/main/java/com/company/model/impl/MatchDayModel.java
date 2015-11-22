@@ -1,11 +1,5 @@
 package com.company.model.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.stream.IntStream;
-
 import com.company.domain.Match;
 import com.company.domain.Player;
 import com.company.domain.Team;
@@ -14,6 +8,12 @@ import com.company.enums.Position;
 import com.company.model.Model;
 import com.company.model.event.ActionEvent;
 import com.company.model.event.ActionListener;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.stream.IntStream;
 
 /**
  * Particular match day model.

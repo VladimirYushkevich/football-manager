@@ -1,9 +1,9 @@
 package com.company.dao;
 
-import java.util.List;
-
 import com.company.dao.xml.XMLDAO;
 import com.company.domain.Team;
+
+import java.util.List;
 
 /**
  * Team DAO.

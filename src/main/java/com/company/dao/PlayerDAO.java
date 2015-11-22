@@ -11,7 +11,7 @@ import com.company.domain.Player;
  */
 public interface PlayerDAO extends XMLDAO {
 
-	void createPlayer(Player player);
+	void createOrUpdatePlayer(Player player);
 
 	Player getPlayer();
 

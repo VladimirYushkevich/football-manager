@@ -1,11 +1,11 @@
 package com.company.view;
 
-import java.util.Optional;
-import java.util.Scanner;
-
 import com.company.ctrl.Controller;
 import com.company.domain.ConsoleNode;
 import com.company.model.event.ActionEvent;
+
+import java.util.Optional;
+import java.util.Scanner;
 
 /**
  * Console view.

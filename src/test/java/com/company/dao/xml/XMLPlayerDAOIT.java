@@ -1,23 +1,30 @@
 package com.company.dao.xml;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import java.io.File;
-import java.util.UUID;
-
-import org.junit.Test;
-import org.mockito.Spy;
-
 import com.company.dao.PlayerDAO;
 import com.company.domain.Player;
 import com.company.enums.Position;
 import com.company.utils.PropertyHolder;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Spy;
+
+import java.io.File;
+import java.util.UUID;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class XMLPlayerDAOIT {
 
 	@Spy
 	private PlayerDAO playerDAO = new XMLPlayerDAO();
+
+	@Before
+	@SuppressWarnings("ConstantConditions")
+	public void setUp(){
+		playerDAO.setFile(new File(getClass().getClassLoader()
+				.getResource("xml/players.xml").getFile()));
+	}
 
 	@Test
 	public void shouldReturnPlayer() {
@@ -35,17 +42,15 @@ public class XMLPlayerDAOIT {
 	}
 
 	@Test
+	@SuppressWarnings("ConstantConditions")
 	public void shouldCreatePlayerWhenAllFieldArePopulated() {
-		playerDAO.setFile(new File(getClass().getClassLoader()
-				.getResource("xml/players.xml").getFile()));
-
 		Player player = new Player();
 		player.setPosition(Position.FW);
 		player.setExperience(10);
 		player.setTeamId(3);
 		player.setMatchDay(2);
 
-		playerDAO.createPlayer(player);
+		playerDAO.createOrUpdatePlayer(player);
 
 		Player createdPlayer = playerDAO.getPlayer();
 		assertEquals(createdPlayer.getPosition(), player.getPosition());
@@ -56,14 +61,11 @@ public class XMLPlayerDAOIT {
 
 	@Test
 	public void shouldCreatePlayerWhenTeamIdIsNotPopulated() {
-		playerDAO.setFile(new File(getClass().getClassLoader()
-				.getResource("xml/players.xml").getFile()));
-
 		Player player = new Player();
 		player.setPosition(Position.FW);
 		player.setExperience(10);
 
-		playerDAO.createPlayer(player);
+		playerDAO.createOrUpdatePlayer(player);
 
 		Player createdPlayer = playerDAO.getPlayer();
 		assertEquals(createdPlayer.getPosition(), player.getPosition());
@@ -73,14 +75,11 @@ public class XMLPlayerDAOIT {
 
 	@Test
 	public void shouldCreatePlayerWhenPositionIsNotPopulated() {
-		playerDAO.setFile(new File(getClass().getClassLoader()
-				.getResource("xml/players.xml").getFile()));
-
 		Player player = new Player();
 		player.setExperience(10);
 		player.setTeamId(3);
 
-		playerDAO.createPlayer(player);
+		playerDAO.createOrUpdatePlayer(player);
 
 		Player createdPlayer = playerDAO.getPlayer();
 		assertNull(createdPlayer.getPosition());
@@ -90,13 +89,10 @@ public class XMLPlayerDAOIT {
 
 	@Test
 	public void shouldCreatePlayerWheMatchDayIsNotPopulated() {
-		playerDAO.setFile(new File(getClass().getClassLoader()
-				.getResource("xml/players.xml").getFile()));
-
 		Player player = new Player();
 		player.setExperience(10);
 
-		playerDAO.createPlayer(player);
+		playerDAO.createOrUpdatePlayer(player);
 
 		Player createdPlayer = playerDAO.getPlayer();
 		assertNull(createdPlayer.getPosition());

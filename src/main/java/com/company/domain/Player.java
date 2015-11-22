@@ -1,8 +1,8 @@
 package com.company.domain;
 
-import java.util.UUID;
-
 import com.company.enums.Position;
+
+import java.util.UUID;
 
 /**
  * Player domain object.
@@ -72,7 +72,8 @@ public class Player {
 		return "Position: "
 				+ ((position == null) ? " Not specified" : position) + "\n"
 				+ "Team: " + ((teamName == null) ? " Not specified" : teamName)
-				+ "\n" + "Experience: " + experience;
+				+ "\n" + "Experience: " + experience
+				+ "\n" + "Games played: " + matchDay;
 	}
 
 }

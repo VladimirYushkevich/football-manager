@@ -1,21 +1,20 @@
 package com.company.dao.xml;
 
+import com.company.dao.PlayerDAO;
+import com.company.domain.Player;
+import com.company.enums.Position;
+import com.company.utils.PropertyHolder;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.IntStream;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import com.company.dao.PlayerDAO;
-import com.company.domain.Player;
-import com.company.enums.Position;
-import com.company.utils.PropertyHolder;
 
 /**
  * XML player DAO implementation.
@@ -30,7 +29,7 @@ public class XMLPlayerDAO extends XMLAbstractDAO implements PlayerDAO {
 	}
 
 	@Override
-	public void createPlayer(Player player) {
+	public void createOrUpdatePlayer(Player player) {
 		List<Object> players = new ArrayList<>();
 		player.setId(UUID.randomUUID());
 		players.add(player);

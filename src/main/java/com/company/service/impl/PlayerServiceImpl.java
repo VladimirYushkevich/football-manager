@@ -1,11 +1,11 @@
 package com.company.service.impl;
 
-import java.util.Optional;
-
 import com.company.dao.PlayerDAO;
 import com.company.dao.xml.XMLPlayerDAO;
 import com.company.domain.Player;
 import com.company.service.PlayerService;
+
+import java.util.Optional;
 
 /**
  * Player service implementation.
@@ -58,16 +58,20 @@ public class PlayerServiceImpl implements PlayerService {
 
 			// merge objects
 			if (existedPlayer.getTeamId() != null) {
-				player.setTeamId(existedPlayer.getTeamId());
+				existedPlayer.setPosition(player.getPosition());
+
+				playerDAO.createOrUpdatePlayer(existedPlayer);
+
+				return;
 			}
 		}
 
-		playerDAO.createPlayer(player);
+		playerDAO.createOrUpdatePlayer(player);
 	}
 
 	@Override
 	public void updatePlayer(Player player) {
-		playerDAO.createPlayer(player);
+		playerDAO.createOrUpdatePlayer(player);
 	}
 
 	public PlayerDAO getPlayerDAO() {

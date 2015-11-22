@@ -1,8 +1,5 @@
 package com.company.ctrl;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.company.ctrl.impl.MatchDispatcher;
 import com.company.ctrl.impl.MenuDispatcher;
 import com.company.ctrl.impl.PlayerDispatcher;
@@ -15,6 +12,9 @@ import com.company.model.impl.MatchDayModel;
 import com.company.view.ConsoleView;
 import com.company.view.MatchDayView;
 import com.company.view.View;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * The implementation of facade controller. Listers event and delegates

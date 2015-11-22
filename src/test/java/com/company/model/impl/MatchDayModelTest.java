@@ -1,19 +1,18 @@
 package com.company.model.impl;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
-
-import java.util.List;
-import java.util.Map;
-
+import com.company.domain.Match;
+import com.company.domain.Team;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 
-import com.company.domain.Match;
-import com.company.domain.Team;
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
 
 public class MatchDayModelTest {
 

@@ -1,15 +1,14 @@
 package com.company.model.impl;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Spy;
-
 import com.company.enums.DispatchAction;
 import com.company.enums.MenuAction;
 import com.company.enums.Position;
 import com.company.model.event.ActionEvent;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Spy;
+
+import static org.junit.Assert.assertEquals;
 
 public class ConsoleMenuModelTest {
 

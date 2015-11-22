@@ -1,11 +1,11 @@
 package com.company.service.impl;
 
-import java.util.List;
-
 import com.company.dao.TeamDAO;
 import com.company.dao.xml.XMLTeamDAO;
 import com.company.domain.Team;
 import com.company.service.TeamService;
+
+import java.util.List;
 
 /**
  * Team service implementation.
